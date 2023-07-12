@@ -1,43 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-        font-family: 'Montserrat',
-        sans-serif;
-}
-
-header,
-footer {
-    background-color: #635959;
-}
-
-.container__menu {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
-nav {
-    display: flex;
-}
-
-.logo {
-    width: 32px;
-    height: 32px;
-    padding-top: 8px;
-    fill: #fff;
-}
-
-.list {
-    list-style: none;
-    color: #fff;
-    margin-left: auto;
-}
-
-li {
-    display: inline;
-    padding-left: 15px;
-}
-
 .grid {
     z-index: -1;
     text-align: center;
@@ -48,28 +8,101 @@ li {
     left: 0;
 }
 
-.container__article {
-    max-width: 660px;
-    margin: 0 auto;
+body {
+    margin: 0;
+    padding: 0;
+        font-family: 'Montserrat',
+        sans-serif;
 }
 
-.title {
+.container {
+    max-width: 830px;
+    margin: 0 auto !important;
+    padding: 0 25px;
+}
+
+.header {
+    background-color: #ffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 70px;
+    opacity: 0.99;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header.scrolled {
+    background-color: black;
+    /* Здесь укажите нужный цвет фона при прокрутке */
+}
+
+nav {
+    display: flex;
+    margin-top: 10px;
+}
+
+.title__nav {
+    margin: 10px 0;
+}
+
+.list {
+    list-style: none;
+    color: #fff;
+    margin-left: auto;
+    display: block;
+}
+
+li {
+    display: inline;
+    padding-left: 15px;
+}
+
+.nav__hyperlink {
+    text-decoration: none;
+    color: #000;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out
+}
+
+.nav__hyperlink:hover {
+    color: rgb(255, 132, 0);
+    transition: .25s;
+}
+
+.title__nav.scrolled,
+.nav__hyperlink.scrolled {
+    color: #fff;
+    /* Здесь укажите нужный цвет фона при прокрутке */
+}
+
+.nav__hyperlink.scrolled:hover {
+    color: rgb(255, 132, 0);
+    transition: .25s;
+}
+
+.title__article {
     font-size: 32px;
     margin-bottom: 15px;
+    padding-top: 100px;
+
 }
 
 time {
     color: rgba(57, 52, 52, 0.508);
 }
 
-.img__iphone {
+.img__artcile {
     width: 667px;
     height: 400px;
     width: 100%;
     height: auto;
 }
 
-.text__iphone {
+.text__article {
     text-align: justify;
     line-height: 30px;
 }
+

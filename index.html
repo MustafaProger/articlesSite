@@ -6,45 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/css/style.css">
+    <script src="/src/js/index.js"></script>
 </head>
 
 <body>
     <!-- <div class="grid">
         <img src="grid.png" alt="" class="">
     </div> -->
-    <header>
-        <div class="container__menu">
+    <header class="header">
+        <div class="container">
             <nav>
-                <div class="logo" >
-                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px">
-                        <g id="Goal_target">
-                            <path
-                                d="M62.2327,12.8454a3.4659,3.4659,0,0,0-2.8765-1.9412l-3.0022-.2758,5.2825-5.33a1.8242,1.8242,0,0,0-2.59-2.5694L53.7356,8.0875,53.4519,5a3.4659,3.4659,0,0,0-1.9392-2.8757,3.29,3.29,0,0,0-3.7161.6724L43.8611,6.7332a1.8288,1.8288,0,0,0-.5279,1.46l.6856,7.4553a4.3912,4.3912,0,0,1-1.2542,3.4939L29.02,33.0063a1.8307,1.8307,0,0,0,.0105,2.59,1.7907,1.7907,0,0,0,1.2844.5221A1.8261,1.8261,0,0,0,31.61,35.586L45.4343,21.6423a4.3918,4.3918,0,0,1,3.52-1.2812l7.2092.6626c.0562.0051.1124.0077.1673.0077a1.8263,1.8263,0,0,0,1.2922-.5355L61.56,16.56A3.2879,3.2879,0,0,0,62.2327,12.8454Zm-6.5877,4.46-7.87-.7231-.7241-7.87,2.813-2.8135.5845,6.3568a1.8271,1.8271,0,0,0,1.6523,1.6527l6.356.5845Z" />
-                            <path
-                                d="M33.875,24.5582a10.4112,10.4112,0,1,0,6.1462,6.0946l-6.6435,6.701a4.3278,4.3278,0,0,1-6.1333-6.1075Z" />
-                            <path
-                                d="M55.9353,23.5132l-7.2095-.6625c-.0578-.0054-.1157-.008-.1733-.008a1.9028,1.9028,0,0,0-1.3428.56l-1.5591,1.5725a18.012,18.012,0,1,1-6.146-6.0951l1.4846-1.4977a1.8873,1.8873,0,0,0,.54-1.5047L40.844,8.4223c-.0069-.0754.0071-.1487.0039-.2239A28.1273,28.1273,0,1,0,56.32,23.5309C56.1938,23.5305,56.0654,23.5251,55.9353,23.5132Z" />
-                        </g>
-                    </svg>
-                </div>
+                <h1 id='title__site' class="title__nav">articles push</h1>
+                
                 <ul class="list">
-                    <li><a href=""></a>Главная</li>
-                    <li><a href=""></a>Контакты</li>
-                    <li><a href=""></a>Лицензия</li>
-                    <li><a href=""></a>Продукт</li>
-                    <li><a href=""></a>Подвал</li>
+                    <li><a class="nav__hyperlink" id="hyperlink__1">Iphone 15</a></li>
+                    <li><a class="nav__hyperlink" id="hyperlink__2">Контакты</a></li>
+                    <li><a class="nav__hyperlink" id="hyperlink__3">Лицензия</a></li>
+                    <li><a class="nav__hyperlink" id="hyperlink__4">Продукт</a></li>
+                    <li><a class="nav__hyperlink" id="hyperlink__5">Подвал</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class="container__article">
+    <div class="container">
         <section>
-            <article>
-                <h1 class="title">Все об Iphone 15</h1>
+            <article class="iphone_15">
+                <h1 class="title__article" id="title__iphone15">Все об Iphone 15</h1>
                 <time datetime="12-07-2023">12 июля 2023</time>
                 
-                <p class="text__iphone">Новый смартфон Apple, релиз которого состоится осенью 2023 года. Компанию из
+                <p class="text__article">Новый смартфон Apple, релиз которого состоится осенью 2023 года. Компанию из
                     Купертино не устроили продажи смартфонов прошлого поколения, поэтому в 2023-м было решено серьезно
                     переработать всю линейку.
 
@@ -60,8 +51,8 @@
                     будет. Скорее даже наоборот. Компании становится всё сложнее противостоять инфляции. Поэтому высок
                     риск повышения цен на iPhone 15. На это намекнул даже генеральный директор компании Тим Кук, который
                     сказал, что люди, в общем, готовы платить за Айфоны больше.</p>
-                    <img src="/src/img/iphone_15.jpeg" alt="" class="img__iphone">
-                    <p class="text__iphone">
+                    <img src="/src/img/iphone_15.jpeg" alt="" class="img__artcile">
+                    <p class="text__article">
                         По словам Джеффа Пу, технического аналитика гонконгской инвестиционной компании Haitong
                         International Securities, iPhone 15 Pro Max будет дороже, чем iPhone 14 Pro Max.
 
@@ -74,6 +65,7 @@
                         или 6-кратное оптическое увеличение, и это заметное улучшение по сравнению с 3-кратным
                         увеличением в текущих моделях.
                     </p>
+
             </article>
         </section>
     </div>
