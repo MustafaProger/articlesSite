@@ -38,7 +38,6 @@ li {
     padding-left: 15px;
 }
 
-
 .grid {
     z-index: -1;
     text-align: center;
@@ -49,3 +48,28 @@ li {
     left: 0;
 }
 
+.container__article {
+    max-width: 660px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+time {
+    color: rgba(57, 52, 52, 0.508);
+}
+
+.img__iphone {
+    width: 667px;
+    height: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.text__iphone {
+    text-align: justify;
+    line-height: 30px;
+}
