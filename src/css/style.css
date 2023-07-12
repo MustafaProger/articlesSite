@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+        font-family: 'Montserrat',
+        sans-serif;
+}
+
+header,
+footer {
+    background-color: #635959;
+}
+
+.container__menu {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+nav {
+    display: flex;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+    padding-top: 8px;
+    fill: #fff;
+}
+
+.list {
+    list-style: none;
+    color: #fff;
+    margin-left: auto;
+}
+
+li {
+    display: inline;
+    padding-left: 15px;
+}
+
+
+.grid {
+    z-index: -1;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
