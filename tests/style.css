@@ -115,29 +115,20 @@ time {
 
 
 .main {
-    text-align: center;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .article__little,
 .article__big {
     display: inline-block;
-    max-height: 500px;
     background-color: #1488CC;
     padding: 12px;
     margin-right: -4px;
     margin: 12px;
-    word-wrap: break-word;
-    overflow-x: hidden;
 }
 
-.article__little {
-    min-width: 31.3%;
-}
-
-.article__big {
-    min-width: 48%;
-}
 
 .img__article-little {
     margin: 0 auto;
@@ -154,8 +145,8 @@ time {
     line-height: 30px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
     .main {
-        padding: 0 17px 0 0;
+        flex-wrap: wrap;
     }
 }
