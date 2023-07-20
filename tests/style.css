@@ -56,11 +56,12 @@ nav {
     list-style: none;
     color: #fff;
     margin-left: auto;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 li {
-    display: inline;
     padding-left: 15px;
 }
 
@@ -68,23 +69,23 @@ li {
     text-decoration: none;
     color: #000;
     background-color: transparent;
-    transition: background-color 0.3s ease-in-out
+    transition: ease-in .30s;
 }
 
 .nav__hyperlink:hover {
+    cursor: pointer;
     color: rgb(255, 132, 0);
-    transition: .25s;
 }
 
 .title__nav.scrolled,
 .nav__hyperlink.scrolled {
     color: #fff;
-    /* Здесь укажите нужный цвет фона при прокрутке */
+    /* Здесь нужный цвет фона при прокрутке */
 }
 
 .nav__hyperlink.scrolled:hover {
     color: rgb(255, 132, 0);
-    transition: .25s;
+    
 }
 
 .title__article {
@@ -97,7 +98,6 @@ li {
 time {
     color: rgba(57, 52, 52, 0.508);
 }
-
 
 .main,
 .article,
@@ -113,7 +113,6 @@ time {
     padding: 150px 15px 15px 15px;
 }
 
-
 .main {
     display: flex;
     align-items: center;
@@ -127,7 +126,6 @@ time {
     margin-right: -4px;
     margin: 12px;
 }
-
 
 .img__article-little {
     margin: 0 auto;
@@ -153,24 +151,29 @@ time {
 .read__more-wrapper {
     text-align: center;
     margin: 40px 0;
+
 }
 
 .read__more-button {
     background-color: #fff;
-    padding: 15px 30px;
     text-transform: lowercase;
     border: none;
     letter-spacing: 2.52px;
+
 }
+
+.read__more-button {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px 30px;
+    transition: ease-in .30s;
+}
+
 
 .read__more-button:hover{
     color: #fff;
-    background-color: #000;
-    transition: .45s;
-}
-
-.read__more-button:after {
-    color: #000;
-    background-color: #fff;
-    transition: .45s;
+    background-color: #000;    
 }
