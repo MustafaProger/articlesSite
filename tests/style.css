@@ -64,7 +64,9 @@ nav {
 li {
     padding-left: 15px;
 }
-
+a {
+    cursor: pointer;
+}
 .nav__hyperlink {
     text-decoration: none;
     color: #000;
@@ -73,7 +75,6 @@ li {
 }
 
 .nav__hyperlink:hover {
-    cursor: pointer;
     color: rgb(255, 132, 0);
 }
 

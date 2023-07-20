@@ -40,7 +40,7 @@ body {
 
 .header.scrolled {
     background-color: black;
-    /* Здесь укажите нужный цвет фона при прокрутке */
+    /* Здесь нужный цвет фона при прокрутке */
 }
 
 nav {
@@ -64,16 +64,19 @@ li {
     padding-left: 15px;
 }
 
+a {
+    cursor: pointer;
+}
+
 .nav__hyperlink {
     text-decoration: none;
     color: #000;
     background-color: transparent;
-    transition: background-color 0.3s ease-in-out
+    transition: ease-in .3s;
 }
 
 .nav__hyperlink:hover {
     color: rgb(255, 132, 0);
-    transition: .25s;
 }
 
 .title__nav.scrolled,
@@ -147,4 +150,34 @@ time {
     .main {
         flex-wrap: wrap;
     }
+}
+
+.read__more-wrapper {
+    text-align: center;
+    margin: 40px 0;
+
+}
+
+.read__more-button {
+    background-color: #fff;
+    text-transform: lowercase;
+    border: none;
+    letter-spacing: 2.52px;
+
+}
+
+.read__more-button {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    padding: 15px 30px;
+    transition: ease-in .3s;
+}
+
+
+.read__more-button:hover {
+    color: #fff;
+    background-color: #000;
 }
