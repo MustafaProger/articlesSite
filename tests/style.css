@@ -12,9 +12,6 @@
     left: 0;
 }
 
-
-
-
 body {
     margin: 0;
     padding: 0;
@@ -55,6 +52,7 @@ body {
 .header__logo {
     font-size: 25px;
     margin: 10px 0;
+    transition: ease-in .3s;
 }
 
 .header__list {
@@ -91,13 +89,10 @@ a {
     /* Здесь нужный цвет фона при прокрутке */
 }
 
-
-
 .title__article {
     font-size: 32px;
     margin-bottom: 15px;
     padding-top: 100px;
-
 }
 
 time {
@@ -147,11 +142,9 @@ time {
     line-height: 30px;
 }
 
-
 .read__more-wrapper {
     text-align: center;
     margin: 40px 0;
-
 }
 
 .read__more-button {
@@ -159,7 +152,6 @@ time {
     text-transform: lowercase;
     border: none;
     letter-spacing: 2.52px;
-
 }
 
 .read__more-button {
@@ -171,7 +163,6 @@ time {
     padding: 15px 30px;
     transition: ease-in .30s;
 }
-
 
 .read__more-button:hover {
     color: #fff;
@@ -210,27 +201,23 @@ time {
     }
 
     .header__burger span {
-        position: absolute;
-        background-color: #fff;
+        background-color: #000;
         position: absolute;
         left: 0;
         height: 2px;
         width: 100%;
         top: 9px;
-        transition: all 0.3s ease 0s;
-
-
+        transition: ease-in .3s;
     }
 
     .header__burger:before,
     .header__burger:after {
         content: "";
-        background-color: #fff;
+        background-color: #000;
         position: absolute;
         width: 100%;
         height: 2px;
         transition: ease-in .3s;
-
     }
 
     .header__burger:before {
@@ -244,23 +231,37 @@ time {
     .header__burger.active:before {
         transform: rotate(45deg);
         top: 9px;
-        transition: all 0.3s ease 0s;
-
-
+        transition: ease-in .3s;
+        background-color: #fff;
     }
 
     .header__burger.active:after {
         transform: rotate(-45deg);
         bottom: 9px;
-        transition: all 0.3s ease 0s;
-
+        transition: ease-in .3s;
+        background-color: #fff;
 
     }
 
     .header__burger.active span {
         transform: scale(0);
-        transition: all 0.3s ease 0s;
+        transition: ease-in .3s;
+        background-color: #fff;
+    }
 
+    .header__burger.scrolled span,
+    .header__burger.scrolled:before,
+    .header__burger.scrolled:after,
+    .header__burger.active.scrolled:before,
+    .header__burger.active.scrolled:after,
+    .header__burger.active.scrolled span {
+        background-color: #fff;
+    }
+
+    .header__burger.scrolled span,
+    .header__burger.scrolled:before,
+    .header__burger.scrolled:after {
+        transition: ease-in .3s;
     }
 
     .header__menu {
@@ -270,15 +271,14 @@ time {
         width: 100%;
         height: 100%;
         overflow: auto;
-        background-color: rgb(85, 205, 238);
+        background-color: #3a7bd5;
         padding: 70px 10px 20px 10px;
-        transition: all 0.3s ease 0s;
-
+        transition: ease-in .3s;
     }
 
     .header__menu.active {
         top: 0;
-        transition: all 0.3s ease 0s;
+        transition: ease-in .3s;
     }
 
     .header__list {
@@ -290,7 +290,8 @@ time {
     }
 
     .header__link {
-        font-size: 24px;
+        font-size: 30px;
+        color: #fff;
     }
 
 }
