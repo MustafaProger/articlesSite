@@ -3,16 +3,17 @@
 }
 
 .grid {
-    z-index: -1;
-    text-align: center;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: -1;
+    text-align: center;
 }
 
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat',
@@ -26,44 +27,51 @@ body {
 }
 
 .header {
-    background-color: #ffff;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    z-index: 999;
-    width: 100%;
-    height: 70px;
-    transition: ease-in .3s;
+    z-index: 50;
 }
 
-.header.scrolled {
-    background-color: black;
-    /* Здесь нужный цвет фона при прокрутке */
+.header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 2;
 }
+
+/* .header.scrolled {
+    background-color: black;
+    Здесь нужный цвет фона при прокрутке
+} */
 
 .header__body {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin: 20px 0;
 }
 
 .header__logo {
-    font-size: 25px;
-    margin: 10px 0;
-    transition: ease-in .3s;
+    z-index: 3;
+    margin: 0;
+    overflow: hidden;
+    color: #fff;
 }
 
 .header__list {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    margin: 10px 0;
     list-style: none;
-}
-
-li {
-    display: inline;
-    padding-left: 15px;
 }
 
 a {
@@ -71,22 +79,24 @@ a {
 }
 
 .header__link {
+    display: inline;
+    padding-left: 15px;
+    font-size: 17px;
     text-decoration: none;
-    color: #000;
-    background-color: transparent;
+    color: #fff;
     transition: ease-in .3s;
 }
 
-.header__link:hover,
-.header__link.scrolled:hover {
+.header__link:hover
+/* .header__link.scrolled:hover*/
+    {
     color: rgb(255, 132, 0);
 }
 
-.header__logo.scrolled,
+/* .header__logo.scrolled,
 .header__link.scrolled {
     color: #fff;
-    /* Здесь укажите нужный цвет фона при прокрутке */
-}
+} */
 
 .title__article {
     font-size: 32px;
@@ -109,9 +119,8 @@ time {
 }
 
 .container__articles {
-    padding: 150px 15px 15px 15px;
+    padding: 125px 12px 12px 12px;
 }
-
 
 .main {
     display: flex;
@@ -121,10 +130,10 @@ time {
 
 .article__little,
 .article__big {
-    background-color: #3a7bd5;
-    padding: 12px;
     margin-right: -4px;
     margin: 12px;
+    padding: 12px;
+    background-color: #3a7bd5;
 }
 
 .img__article-little {
@@ -148,22 +157,21 @@ time {
 }
 
 .read__more-button {
+    border: none;
     background-color: #fff;
     text-transform: lowercase;
-    border: none;
     letter-spacing: 2.52px;
 }
 
 .read__more-button {
-    text-decoration: none;
-    color: #000;
     display: block;
     width: 70%;
     margin: 0 auto;
     padding: 15px 30px;
+    color: #000;
+    text-decoration: none;
     transition: ease-in .3s;
 }
-
 
 .read__more-button:hover {
     color: #fff;
@@ -186,7 +194,7 @@ time {
 
     .header__body {
         position: relative;
-        top: 10px;
+        top: 0;
         left: 0;
     }
 
@@ -206,7 +214,7 @@ time {
     }
 
     .header__burger span {
-        background-color: #000;
+        background-color: #fff;
         position: absolute;
         left: 0;
         height: 2px;
@@ -218,7 +226,7 @@ time {
     .header__burger:before,
     .header__burger:after {
         content: "";
-        background-color: #000;
+        background-color: #fff;
         position: absolute;
         width: 100%;
         height: 2px;
@@ -253,7 +261,7 @@ time {
         background-color: #fff;
     }
 
-    .header__burger.scrolled span,
+    /* .header__burger.scrolled span,
     .header__burger.scrolled:before,
     .header__burger.scrolled:after,
     .header__burger.active.scrolled:before,
@@ -266,7 +274,7 @@ time {
     .header__burger.scrolled:before,
     .header__burger.scrolled:after {
         transition: ease-in .3s;
-    }
+    } */
 
     .header__menu {
         position: fixed;
@@ -287,6 +295,7 @@ time {
 
     .header__list {
         display: block;
+        padding: 20px 0;
     }
 
     .header__list li {
@@ -298,5 +307,4 @@ time {
         font-size: 30px;
         color: #fff;
     }
-
 }
