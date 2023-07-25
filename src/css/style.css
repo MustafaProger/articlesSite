@@ -15,7 +15,7 @@
 body {
     margin: 0;
     padding: 0;
-        font-family: 'Montserrat',
+    font-family: 'Montserrat',
         sans-serif;
 }
 
@@ -30,12 +30,10 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 999;
     width: 100%;
     height: 70px;
-    opacity: 0.99;
-    background-color: transparent;
-    transition: background-color 0.3s ease-in-out;
+    transition: ease-in .3s;
 }
 
 .header.scrolled {
@@ -43,20 +41,24 @@ body {
     /* Здесь нужный цвет фона при прокрутке */
 }
 
-nav {
+.header__body {
     display: flex;
+    justify-content: space-between;
     margin-top: 10px;
 }
 
-.title__nav {
+.header__logo {
+    font-size: 25px;
     margin: 10px 0;
+    transition: ease-in .3s;
 }
 
-.list {
-    list-style: none;
+.header__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fff;
-    margin-left: auto;
-    display: block;
+    list-style: none;
 }
 
 li {
@@ -68,33 +70,28 @@ a {
     cursor: pointer;
 }
 
-.nav__hyperlink {
+.header__link {
     text-decoration: none;
     color: #000;
     background-color: transparent;
     transition: ease-in .3s;
 }
 
-.nav__hyperlink:hover {
+.header__link:hover,
+.header__link.scrolled:hover {
     color: rgb(255, 132, 0);
 }
 
-.title__nav.scrolled,
-.nav__hyperlink.scrolled {
+.header__logo.scrolled,
+.header__link.scrolled {
     color: #fff;
     /* Здесь укажите нужный цвет фона при прокрутке */
-}
-
-.nav__hyperlink.scrolled:hover {
-    color: rgb(255, 132, 0);
-    transition: .25s;
 }
 
 .title__article {
     font-size: 32px;
     margin-bottom: 15px;
     padding-top: 100px;
-
 }
 
 time {
@@ -124,8 +121,7 @@ time {
 
 .article__little,
 .article__big {
-    display: inline-block;
-    background-color: #1488CC;
+    background-color: #3a7bd5;
     padding: 12px;
     margin-right: -4px;
     margin: 12px;
@@ -146,16 +142,9 @@ time {
     line-height: 30px;
 }
 
-@media (max-width: 767px) {
-    .main {
-        flex-wrap: wrap;
-    }
-}
-
 .read__more-wrapper {
     text-align: center;
     margin: 40px 0;
-
 }
 
 .read__more-button {
@@ -163,7 +152,6 @@ time {
     text-transform: lowercase;
     border: none;
     letter-spacing: 2.52px;
-
 }
 
 .read__more-button {
@@ -180,4 +168,135 @@ time {
 .read__more-button:hover {
     color: #fff;
     background-color: #000;
+}
+
+@media (max-width: 767px) {
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    .main {
+        flex-wrap: wrap;
+    }
+
+    .header {
+        height: 70px;
+    }
+
+    .header__body {
+        position: relative;
+        top: 10px;
+        left: 0;
+    }
+
+    .header__logo {
+        font-size: 23px;
+        margin: 0;
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        top: 5px;
+        left: 0;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+
+    .header__burger span {
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        top: 9px;
+        transition: ease-in .3s;
+    }
+
+    .header__burger:before,
+    .header__burger:after {
+        content: "";
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        transition: ease-in .3s;
+    }
+
+    .header__burger:before {
+        top: 0;
+    }
+
+    .header__burger:after {
+        bottom: 0;
+    }
+
+    .header__burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+        transition: ease-in .3s;
+        background-color: #fff;
+    }
+
+    .header__burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+        transition: ease-in .3s;
+        background-color: #fff;
+    }
+
+    .header__burger.active span {
+        transform: scale(0);
+        transition: ease-in .3s;
+        background-color: #fff;
+    }
+
+    .header__burger.scrolled span,
+    .header__burger.scrolled:before,
+    .header__burger.scrolled:after,
+    .header__burger.active.scrolled:before,
+    .header__burger.active.scrolled:after,
+    .header__burger.active.scrolled span {
+        background-color: #fff;
+    }
+
+    .header__burger.scrolled span,
+    .header__burger.scrolled:before,
+    .header__burger.scrolled:after {
+        transition: ease-in .3s;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #3a7bd5;
+        padding: 70px 10px 20px 10px;
+        transition: ease-in .3s;
+    }
+
+    .header__menu.active {
+        top: 0;
+        transition: ease-in .3s;
+    }
+
+    .header__list {
+        display: block;
+    }
+
+    .header__list li {
+        margin: 0 0 20px 0;
+    }
+
+    .header__link {
+        display: block;
+        font-size: 30px;
+        color: #fff;
+    }
+
 }
